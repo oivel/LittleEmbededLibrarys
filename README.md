@@ -124,7 +124,7 @@ In PuTTY run all of these commands line by line
 # Congrats
 Yay, you installed LEL onto your router! Now simply connect the router to power and place it anywhere. All you need to do is connect to the router's network and you can view the website. If your having trouble please go the the issues page on this GitHub repository to troubleshoot your problem.
 
-## To access the admin panel again and to access the internet on your router, please go to the wiki section on this repository
+## To access the admin panel or to add USB Drive support go to the Wiki page
 
 
 
