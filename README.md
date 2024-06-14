@@ -78,9 +78,13 @@ Paste these lines into putty:
 opkg install dropbear
 ```
 
-To start NoDogSplash paste this
 ```bash
 /etc/init.d/dropbear start
+```
+
+Next is a text editor
+```bash
+opkg install nano
 ```
 
 
