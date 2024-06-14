@@ -81,10 +81,11 @@ opkg install dropbear
 ```bash
 /etc/init.d/dropbear start
 ```
-
-Next is a text editor
 ```bash
 opkg install nano
+```
+```bash
+opkg install openssh-sftp-server
 ```
 
 
