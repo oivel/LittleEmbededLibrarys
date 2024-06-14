@@ -43,7 +43,7 @@ To get devices connected to the router go to networks then wireless at the top o
 
 Then click on Wireless Security and in the Encryption dropdown select No Encryption (open network). OpenWRT is now configured!
 
-## Installing NoDogSplash
+## Installing NoDogSplash and DropBear
 In this step, we will use a program called NoDogSplash which is an open-source captive portal app made for OpenWRT. To install it, open PuTTY and type 192.168.1.1 for the hostname. Make sure the port is set to 22. Once inside the username is root and the password is the password you set earlier. 
 
 Copy and Paste this line of code into the Putty Command Line
@@ -69,6 +69,20 @@ To start NoDogSplash paste this
 
 
 Boom, now you have a captive portal on your router!
+
+Now its time for dropbear
+
+Paste these lines into putty:
+
+```bash
+opkg install dropbear
+```
+
+To start NoDogSplash paste this
+```bash
+/etc/init.d/dropbear start
+```
+
 
 ## Network Config
 Before you can access your captive portal on any device we need to configure the network settings on OpenWRT. Luckily I've made it easy. Open FilesRemote and type root@192.168.1.1 for the host name. The password is the password you set for OpenWRT. Once inside navigate to /etc/config and find the nodogsplash file. Go ahead and delete it. Find the nodogsplash file in the config repository folder above and drag and drop it into the folder to replace it.
