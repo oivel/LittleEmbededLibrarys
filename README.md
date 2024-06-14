@@ -64,7 +64,7 @@ opkg install nodogsplash
 
 To start NoDogSplash paste this
 ```bash
-/etc/init.d/nodogsplash start
+/etc/init.d/nodogsplash stop
 ```
 
 
@@ -90,7 +90,17 @@ opkg install openssh-sftp-server
 
 
 ## Network Config
-Before you can access your captive portal on any device we need to configure the network settings on OpenWRT. Luckily I've made it easy. Open FilesRemote and type root@192.168.1.1 for the host name. The password is the password you set for OpenWRT. Once inside navigate to /etc/config and find the nodogsplash file. Go ahead and delete it. Find the nodogsplash file in the config repository folder above and drag and drop it into the folder to replace it.
+Before connecting to the router on FilesRemote we need to allow access from port 22. Simply go to your admin pannel and go to network > firewall. In the web interface: Go to the Traffic Rules tab.
+Click on Add under the Open Ports on Router section.
+Fill in the details:
+Name: Allow-SSH
+Protocol: TCP
+External Port: 22
+Internal IP Address: Leave blank (default is any)
+Internal Port: Leave blank (default is any)
+Click Save & Apply.
+
+Now, before you can access your captive portal on any device we need to configure the network settings on OpenWRT. Luckily I've made it easy. Open FilesRemote and type root@192.168.1.1 for the host name. The password is the password you set for OpenWRT. Once inside navigate to /etc/config and find the nodogsplash file. Go ahead and delete it. Find the nodogsplash file in the config repository folder above and drag and drop it into the folder to replace it.
 
 Next, let's configure the firewall so that when you connect it leads you to the captive portal. In the same config folder, find the firewall file. Then delete it and replace it with the firewall file that is in the config folder in our repository.
 Do the same thing for the dropbear file.
