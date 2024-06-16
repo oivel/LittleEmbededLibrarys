@@ -103,7 +103,7 @@ Click Save & Apply.
 Now, before you can access your captive portal on any device we need to configure the network settings on OpenWRT. Luckily I've made it easy. Open FilesRemote and type root@192.168.1.1 for the host name. The password is the password you set for OpenWRT. Once inside navigate to /etc/config and find the nodogsplash file. Go ahead and delete it. Find the nodogsplash file in the config repository folder above and drag and drop it into the folder to replace it.
 
 Next, let's configure the firewall so that when you connect it leads you to the captive portal. In the same config folder, find the firewall file. Then delete it and replace it with the firewall file that is in the config folder in our repository.
-Do the same thing for the dropbear file.
+Do the same thing for the dropbear file and the DHCP file.
 
 ## Custom Website
 Go ahead and test LEL by connecting to the network you set up. You should be brought to a website or be shown that you need to take action to connect. If nothing works go to our help page and we will help troubleshoot it. Now that it works let's add a custom website.
