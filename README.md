@@ -17,7 +17,7 @@ IMPORTANT: Please note that by installing OpenWRT you could do undoable damage t
 LEL can run on any router. LEL runs an open-source router firmware called OpenWRT. 
 Below is a button to see if your router is compatible. Please search for your router inside the link.
 
-[Click Here](https://openwrt.org/toh/views/toh_fwdownload?dataflt%5B0%5D=supported%20current%20rel_%3D23.05.3)
+[Click Here](https://openwrt.org/toh/views/toh_fwdownload)
 
 ### Software
 Before you start anything, you will need to download and install these softwares to your computer.
